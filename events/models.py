@@ -15,3 +15,6 @@ class Post(models.Model):
     eventtype = models.IntegerField(choices=EVENTTYPE, default=0)
     location = models.TextField()
     status = models.IntegerField(choices=STATUS, default=0)
+
+    def __str__(self):
+        return f"{self.title} | {self.date}"
