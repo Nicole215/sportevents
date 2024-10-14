@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 STATUS = ((0, "Draft"), (1, "Published"))
+EVENTTYPE = ((0, "MudRun"), (1, "Hiking"), (2, "Other"))
 
 # Create your models here.
 class Post(models.Model):
@@ -11,5 +12,6 @@ class Post(models.Model):
         User, on_delete=models.CASCADE, related_name="events_posts"
     )
     date = models.DateField()
+    eventtype = models.IntegerField(choices=EVENTTYPE, default=0)
     location = models.TextField()
     status = models.IntegerField(choices=STATUS, default=0)
