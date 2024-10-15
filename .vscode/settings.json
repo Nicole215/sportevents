@@ -1,0 +1,17 @@
+{
+  "files.exclude": {
+      "**/.DS_Store": true,
+      "**/.git": true,
+      "**/.github": true,
+      "**/.gitp*": true,
+      "**/.hg": true,
+      "**/.svn": true,
+      "**/.vscode": true,
+      "**/core.Microsoft*": true,
+      "**/core.mongo*": true,
+      "**/core.python*": true,
+      "**/CVS": true
+   },
+
+   "terminal.integrated.gpuAcceleration": "canvas",
+}
